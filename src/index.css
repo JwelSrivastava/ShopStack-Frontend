@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ShopStack E-commerce Design System
+Modern, clean e-commerce design with professional aesthetics.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* E-commerce Background Colors */
+    --background: 0 0% 98%;
+    --foreground: 222 47% 11%;
+
+    /* Cards and Surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --card-shadow: 0 0% 0% 0.05;
+
+    /* Interactive Elements */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Brand Colors - Professional Blue Theme */
+    --primary: 217 78% 51%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 217 78% 46%;
+    --primary-light: 217 78% 96%;
+
+    /* Secondary Actions */
+    --secondary: 210 18% 87%;
+    --secondary-foreground: 222 47% 11%;
+    --secondary-hover: 210 18% 82%;
+
+    /* Muted Elements */
+    --muted: 210 18% 96%;
+    --muted-foreground: 215 25% 27%;
+
+    /* Accent Colors */
+    --accent: 142 86% 28%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 142 86% 23%;
+
+    /* Status Colors */
+    --success: 142 86% 28%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 100% 50%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and Inputs */
+    --border: 214 32% 91%;
+    --input: 214 32% 94%;
+    --ring: 217 78% 51%;
+
+    /* E-commerce Specific */
+    --price-color: 142 86% 28%;
+    --sale-color: 0 84% 60%;
+    --rating-color: 38 100% 50%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 78% 51%), hsl(217 78% 46%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 78% 51% / 0.9), hsl(217 78% 46% / 0.95));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 18% 98%));
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px 0 hsl(var(--card-shadow));
+    --shadow-md: 0 4px 6px -1px hsl(var(--card-shadow)), 0 2px 4px -1px hsl(var(--card-shadow));
+    --shadow-lg: 0 10px 15px -3px hsl(var(--card-shadow)), 0 4px 6px -2px hsl(var(--card-shadow));
+    --shadow-hover: 0 8px 25px -8px hsl(217 78% 51% / 0.25);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark E-commerce Background */
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
+    --card-shadow: 0 0% 0% 0.25;
+
+    /* Dark Cards and Surfaces */
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
+
+    /* Dark Interactive Elements */
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Dark Brand Colors */
+    --primary: 217 78% 56%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 217 78% 61%;
+    --primary-light: 217 78% 15%;
+
+    /* Dark Secondary */
+    --secondary: 217 33% 18%;
+    --secondary-foreground: 210 40% 98%;
+    --secondary-hover: 217 33% 23%;
+
+    /* Dark Muted */
+    --muted: 217 33% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    /* Dark Accent */
+    --accent: 142 86% 33%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 142 86% 38%;
+
+    /* Dark Status Colors */
+    --success: 142 86% 33%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 100% 55%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Dark Borders and Inputs */
+    --border: 217 33% 18%;
+    --input: 217 33% 15%;
+    --ring: 217 78% 56%;
+
+    /* Dark Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 78% 56%), hsl(217 78% 51%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 78% 56% / 0.9), hsl(217 78% 51% / 0.95));
+    --gradient-card: linear-gradient(145deg, hsl(222 47% 8%), hsl(217 33% 10%));
+
+    /* Dark Shadows */
+    --shadow-hover: 0 8px 25px -8px hsl(217 78% 56% / 0.4);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+}
+
+@layer components {
+  .card-hover {
+    transition: var(--transition-smooth);
+  }
+
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90;
+    transition: var(--transition-smooth);
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80;
+    transition: var(--transition-smooth);
+  }
+
+  .price-text {
+    @apply text-price-color font-semibold;
+    color: hsl(var(--price-color));
+  }
+
+  .sale-badge {
+    @apply bg-destructive text-destructive-foreground px-2 py-1 rounded-md text-sm font-medium;
+  }
+
+  .rating-stars {
+    color: hsl(var(--rating-color));
+  }
+}
